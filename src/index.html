@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Заголовок страницы</title>
+    <title>Resume</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -12,10 +16,91 @@
     />
   </head>
   <body>
+<header class="header">
+  <div class="container header__container">
+    <img class="header__foto" src="images/my-foto.jpg" width="370">
+  </div>
+</header>
+<main>
+  <section class="information">
+      <ul class="information__contacts">
+        <li class="information__contacts-phone">  
+          <a aria-label="Phone" href="tel:+380966777687">
+              +380966777687
+          </a>
+        </li>
+        <li class="information__contacts-mail">
+          <a aria-label="Email" href="mailto:yulia.bisyuk@gmail.com">
+              yulia.bisyuk@gmail.com
+        </a>
+        </li>
+        <li class="information__contacts-git-hub"><a aria-label="Github" href="https://github.com/yulia-bisyuk">
+            https://github.com/yulia-bisyuk
+        </a>
+        </li>
+        <li class="information__contacts-telegram">
+          <a aria-label="Telegram" href="https://telegram.me/U_bisyk
+">
+            U_bisyk
+          </a>
+        </li>
+      </ul>
+   
+    <div class="information__short-resume">
+      <h2>Introducion</h2>
+      <p>
+        Active person who is eager to be cool front-end developer and reach impressive results in this sphere.
+      </p>
+    </div>
+    <div class="information__technologies">
+      <h2>Technologies&Instruments</h2>
+      <ul class="information__technologies-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>SASS</li>
+        <li>JavaScript</li>
+        <li>React.js</li>
+        <li>Github</li>
+        <li>Figma</li>
+
+      </ul>
+    </div>
+    <div class="information__soft-skills">
+      <h2>Soft-skills</h2>
+     <ul class="information__soft-skills-list">
+        <li>Empathy</li>
+        <li>Communication</li>
+        <li>Helpfulness</li>
+        <li>Accountability and responsibility</li>
+        <li>Productivity</li>
+     </ul>
+    </div>
+    <div class="information__languages">
+      <h2>Languages</h2>
+      <ul class="information__languages-list">
+        <li>Ukrainian - native</li>
+        <li>Russian - free</li>
+        <li>English - Upper-Intermediate</li>
+      </ul>
+    </div>
+
+  </section>
+  <section class="experience">
+<div class="experience__work"></div>
+<div class="experience__education"></div>
+  </section>
+</main>
+
+
+
+
+
+
+
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <include src="./partials/example.html"></include>
+    <!-- <include src="./partials/example.html"></include> -->
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
-    <script src="./index.js"></script>
+    <!-- <script src="./index.js"></script> -->
   </body>
 </html>
