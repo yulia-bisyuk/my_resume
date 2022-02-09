@@ -1,49 +1,85 @@
 .container {
-  width: 1024px;
+  width: 280px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.main-container {
-  display: flex;
-}
-
-.info-wrapper,
-.experience-education-wrapper {
-  width: 50%;
   padding-left: 30px;
   padding-right: 30px;
+
+  @media screen and (min-width: 480px) {
+    width: 320px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 740px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 1090px;
+  }
 }
 
-.info-wrapper {
-  background-color: $bg-grey;
-  padding-top: 180px;
+@media screen and (min-width: 768px) {
+  .main-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+  }
+  .information__container,
+  .experience__container {
+    width: 100%;
+  }
 }
-.experience-education-wrapper {
-  background-color: $bg-light-grey;
-}
-.header__container {
+
+.header {
   position: relative;
   height: 200px;
-  width: 994px;
   background-image: url(../images/coding.jpg);
   background-size: cover;
   background-position: center;
+  border-bottom: 2px solid $accent-yellow-color;
 }
+
 .header__foto {
-  width: 320px;
-  height: 320px;
+  margin: auto;
+  width: 280px;
+  height: 280px;
   position: absolute;
-  left: 5%;
-  top: 20%;
+  right: 0;
+  left: 0;
+  top: 12%;
   object-fit: cover;
-  border-radius: 50%;
+  border: 2px solid $accent-yellow-color;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 30px;
+    width: 300px;
+    height: 300px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+.information {
+  background-color: $bg-grey;
+  padding-top: 132px;
+  padding-bottom: 34px;
+  border-bottom: 2px solid $accent-yellow-color;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 150px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-top: 200px;
+  }
+}
+
+.experience {
+  background-color: $bg-light-grey;
 }
 
 .information__contacts-item:not(:last-child) {
   margin-bottom: 7px;
 }
+
 .information__contacts-item-link {
   display: flex;
   align-items: center;
@@ -58,14 +94,63 @@
     fill: $accent-yellow-color;
   }
 }
+
 .information__block {
   margin-top: 30px;
 }
+
 .block-title {
+  margin-top: 34px;
+  margin-bottom: 12px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $accent-yellow-color;
+}
+
+.experience .block-title {
+  margin-top: 0;
+  padding-top: 34px;
+}
+
+.education.block-title {
+  padding-top: 0px;
+  margin-top: 0;
+}
+
+.education.block-time {
+  margin-bottom: 0px;
+}
+
+.block-subtitle {
+  margin-bottom: 12px;
+}
+
+.block-time {
+  margin-bottom: 12px;
+}
+
+.block-description:not(:last-child) {
+  margin-bottom: 34px;
+}
+
+.block-description-last {
+  padding-bottom: 34px;
+}
+
+.education__title {
+  color: $accent-yellow-color;
+  font-size: 16px;
+}
+
+.position {
+  font-size: 20px;
+  margin-bottom: 34px;
+}
+
+.footer {
+  height: 24px;
+  background-color: $accent-yellow-color;
 }
